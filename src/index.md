@@ -229,3 +229,5 @@ let barChart = await vl.render({
   <div class="chart">${brazilMap}</div>
   <div class="chart">${barChart}</div>
 </div>
+
+O código-fonte completo do dashboard está [neste repositório do GitHub](https://github.com/alessandrofajr/vega-lite-interactive-charts). Escrevi um guia [detalhando o processo de desenvolvimento aqui](https://alessandrofajr.com/blog/vega-lite-graficos-interativos-observable-framework/).
