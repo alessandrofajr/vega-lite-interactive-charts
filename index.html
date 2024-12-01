@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.0">
+<title>Vega-Lite: Gráficos Interativos | Vega-Lite Interactive Charts</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.dcdbf18e.css">
+<link rel="modulepreload" href="./_observablehq/client.826badc3.js">
+<link rel="modulepreload" href="./_observablehq/runtime.9393ab6d.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.d4a7cb81.js">
+<link rel="modulepreload" href="./_npm/arquero@7.2.0/f3eb4e3f.js">
+<link rel="modulepreload" href="./_npm/vega@5.30.0/564f05a3.js">
+<link rel="modulepreload" href="./_npm/vega-lite@5.21.0/bc9dfb02.js">
+<link rel="modulepreload" href="./_npm/vega-lite-api@5.6.0/a6af4a34.js">
+<link rel="modulepreload" href="./_npm/vega-tooltip@0.35.2/4365b9a8.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/407f7a1f.js">
+<link rel="modulepreload" href="./_npm/acorn@8.14.0/6d258ba8.js">
+<link rel="modulepreload" href="./_npm/@uwdata/flechette@1.1.1/df6d503a.js">
+<link rel="modulepreload" href="./_npm/vega-util@1.17.2/a0ac0a5c.js">
+<link rel="modulepreload" href="./_npm/vega-dataflow@5.7.6/0360e671.js">
+<link rel="modulepreload" href="./_npm/vega-transforms@4.12.0/de32164d.js">
+<link rel="modulepreload" href="./_npm/vega-view-transforms@4.6.0/33402345.js">
+<link rel="modulepreload" href="./_npm/vega-encode@4.10.1/4cc6d302.js">
+<link rel="modulepreload" href="./_npm/vega-geo@4.4.2/44d23b7f.js">
+<link rel="modulepreload" href="./_npm/vega-force@4.2.1/5a714903.js">
+<link rel="modulepreload" href="./_npm/vega-hierarchy@4.1.2/df9c79f8.js">
+<link rel="modulepreload" href="./_npm/vega-label@1.3.0/0665019c.js">
+<link rel="modulepreload" href="./_npm/vega-regression@1.3.0/d2e8088f.js">
+<link rel="modulepreload" href="./_npm/vega-voronoi@4.2.3/98e35642.js">
+<link rel="modulepreload" href="./_npm/vega-wordcloud@4.1.5/88185637.js">
+<link rel="modulepreload" href="./_npm/vega-crossfilter@4.1.2/ddc1a58c.js">
+<link rel="modulepreload" href="./_npm/vega-statistics@1.9.0/7174884a.js">
+<link rel="modulepreload" href="./_npm/vega-time@2.1.2/5bbb9135.js">
+<link rel="modulepreload" href="./_npm/vega-loader@4.5.2/8019e749.js">
+<link rel="modulepreload" href="./_npm/vega-scenegraph@4.13.0/4a5ac54c.js">
+<link rel="modulepreload" href="./_npm/vega-scale@7.4.1/98883cd9.js">
+<link rel="modulepreload" href="./_npm/vega-projection@1.6.1/d32eeceb.js">
+<link rel="modulepreload" href="./_npm/vega-view@5.13.0/8d569b89.js">
+<link rel="modulepreload" href="./_npm/vega-format@1.1.2/8c888956.js">
+<link rel="modulepreload" href="./_npm/vega-functions@5.15.0/c46ba355.js">
+<link rel="modulepreload" href="./_npm/vega-parser@6.4.0/3b923ef3.js">
+<link rel="modulepreload" href="./_npm/vega-runtime@6.2.0/1f88602b.js">
+<link rel="modulepreload" href="./_npm/vega-expression@5.1.1/373e2111.js">
+<link rel="modulepreload" href="./_npm/vega-event-selector@3.0.1/07d2b39d.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e95f898e.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/034b7bcb.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/dcd02767.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/2c0cdfa2.js">
+<link rel="modulepreload" href="./_npm/vega-canvas@1.2.7/6c089db6.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e1ff060.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/f1db2593.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/00c41b5d.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/5bc129e1.js">
+<link rel="modulepreload" href="./_npm/topojson-client@3.1.0/44d97fcb.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/f8e03c56.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/4bb53638.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/567840a0.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/cf9b720b.js">
+<link rel="modulepreload" href="./_npm/d3-geo-projection@4.0.0/91c31642.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/f31b5398.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.0/5851d7ef.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/19c92b44.js">
+<link rel="modulepreload" href="./_npm/vega-selections@5.4.2/35c09870.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/5eed35fd.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/aa5b35a8.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/b5f7cdc6.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.0.1/e67acb27.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/8ac9039b.js">
+<link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
+<script type="module">
+
+import {define} from "./_observablehq/client.826badc3.js";
+import {registerFile} from "./_observablehq/stdlib.d4a7cb81.js";
+
+registerFile("./data/br_bd_diretorios_brasil_uf.csv", {"name":"./data/br_bd_diretorios_brasil_uf.csv","mimeType":"text/csv","path":"./_file/data/br_bd_diretorios_brasil_uf.305d6fb0.csv","lastModified":1733078646751,"size":697});
+registerFile("./data/br_mme_consumo_energia_eletrica_uf.csv", {"name":"./data/br_mme_consumo_energia_eletrica_uf.csv","mimeType":"text/csv","path":"./_file/data/br_mme_consumo_energia_eletrica_uf.e9fa8664.csv","lastModified":1733078646755,"size":1188306});
+
+define({id: "48f0d164", outputs: ["aq","op","table","vega","vegaLite","vegaLiteApi","vegaTooltip"], body: async () => {
+const [aq, {op, table}, vega, vegaLite, vegaLiteApi, vegaTooltip] = await Promise.all([import("./_npm/arquero@7.2.0/f3eb4e3f.js"), import("./_npm/arquero@7.2.0/f3eb4e3f.js"), import("./_npm/vega@5.30.0/564f05a3.js"), import("./_npm/vega-lite@5.21.0/bc9dfb02.js"), import("./_npm/vega-lite-api@5.6.0/a6af4a34.js"), import("./_npm/vega-tooltip@0.35.2/4365b9a8.js")]);
+
+return {aq,op,table,vega,vegaLite,vegaLiteApi,vegaTooltip};
+}});
+
+define({id: "78b315ed", inputs: ["vegaLiteApi","vega","vegaLite","vegaTooltip"], outputs: ["vl"], body: (vegaLiteApi,vega,vegaLite,vegaTooltip) => {
+const vl = vegaLiteApi.register(vega, vegaLite, {
+  init: (view) => {
+    view.tooltip(new vegaTooltip.Handler().call);
+    if (view.container()) view.container().style["overflow-x"] = "auto";
+  }
+}); // Configuring the Vega-Lite tooltip plugin 
+return {vl};
+}});
+
+define({id: "7995fc2b", inputs: ["FileAttachment"], outputs: ["energyConsumptionData","brazilStateCodes"], body: (FileAttachment) => {
+const energyConsumptionData = FileAttachment("./data/br_mme_consumo_energia_eletrica_uf.csv").csv();
+const brazilStateCodes = FileAttachment("./data/br_bd_diretorios_brasil_uf.csv").csv();
+return {energyConsumptionData,brazilStateCodes};
+}});
+
+define({id: "fc9c3b63", inputs: ["aq","brazilStateCodes"], outputs: ["brazilStateCodesAq"], body: (aq,brazilStateCodes) => {
+let brazilStateCodesAq = aq
+    .from(brazilStateCodes)
+return {brazilStateCodesAq};
+}});
+
+define({id: "5dbeebca", inputs: ["aq","energyConsumptionData","brazilStateCodesAq"], outputs: ["energyConsumptionDataAq"], body: (aq,energyConsumptionData,brazilStateCodesAq) => {
+let energyConsumptionDataAq = aq
+    .from(energyConsumptionData)
+    .join_left(brazilStateCodesAq, ['sigla_uf', 'sigla'])
+    .select(aq.not('regiao', 'sigla')) // Removing columns
+return {energyConsumptionDataAq};
+}});
+
+define({id: "70e5a760", inputs: ["energyConsumptionDataAq","aq"], outputs: ["totalConsumptionByState"], body: (energyConsumptionDataAq,aq) => {
+let totalConsumptionByState = energyConsumptionDataAq
+    .filter((d) => d.ano == "2023" && d.tipo_consumo != "Cativo")
+    .groupby("sigla_uf", "id_uf", "nome")
+    .rollup({ consumo_total: aq.op.sum("consumo") }).objects()
+return {totalConsumptionByState};
+}});
+
+define({id: "6e975650", inputs: ["vl","totalConsumptionByState"], outputs: ["brazilMap"], body: async (vl,totalConsumptionByState) => {
+let brazilMap = await vl.render({
+    spec:{
+        width: 550,
+        height: 400,
+        autosize: {type: "fit", contains: "padding"},
+        title: {
+            text: "Consumo total de energia por estado em 2023",
+            anchor: "start",
+            offset: 20,
+            fontSize: 20,
+            subtitle: [`Clique em um estado para filtrar o gráfico ao lado`, `Clique novamente para voltar à agregação nacional.`],
+            subtitleFontSize: 16
+            },
+        data: {
+            url: "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/json&qualidade=intermediaria&intrarregiao=UF",
+            format: {
+            type: "topojson",
+            feature: "BRUF"
+            }
+        },
+        projection: {
+            type: "mercator",
+        },
+        transform: [
+            {
+                lookup: "properties.codarea", // Vinculates 'properties.codarea' from TopoJSON
+                from: {
+                data: { values: totalConsumptionByState }, // Energy consumption data
+                key: "id_uf", // Field to link with TopoJSON
+                fields: ["consumo_total", "nome"] // Data to be used on the map
+                }
+            },
+            {
+                calculate: "datum.consumo_total || 0", // Defines 0 for dataless states
+                as: "consumo_total"
+            }
+            ],
+        selection: {
+            stateSelector: {
+                type: "point",
+                fields: ["properties.codarea", "nome"], // Field used to give the signal to the Listener
+            }
+        },
+        mark: {
+            type: "geoshape",
+            stroke: "white",
+            strokeWidth: 0.5
+            },
+        encoding: {
+            color: {
+                field: "consumo_total",
+                type: "quantitative",
+                scale: {
+                scheme: "blues" 
+                },
+                title: "Consumo em MWh",
+                legend: {
+                    direction: "vertical",
+                    orient: "bottom-left",
+                    offset: 10
+                }
+            },
+            tooltip: [
+                { field: "nome", type: "nominal", title: "Estado:" },
+                { field: "consumo_total", type: "quantitative", title: "Consumo Total (MWh):" }
+                ]
+            }
+        }
+})
+return {brazilMap};
+}});
+
+define({id: "27c159b0", inputs: ["Mutable"], outputs: ["clickedStateCode","setClickedStateCode","clickedStateName","setClickedStateName"], body: (Mutable) => {
+let clickedStateCode = Mutable('0');
+let setClickedStateCode = (x) => {clickedStateCode.value = x};
+
+let clickedStateName = Mutable('Brasil');
+let setClickedStateName = (x) => {clickedStateName.value = x};
+return {clickedStateCode,setClickedStateCode,clickedStateName,setClickedStateName};
+}});
+
+define({id: "1017c197", inputs: ["clickedStateCode","setClickedStateCode","setClickedStateName","brazilMap","invalidation"], outputs: ["stateSelectorHandler"], body: (clickedStateCode,setClickedStateCode,setClickedStateName,brazilMap,invalidation) => {
+function stateSelectorHandler(name, value) {
+
+    const newSelection = value["properties\\.codarea"]?.[0] ?? '0';
+    const stateSelected = value.nome?.[0] ?? 'Brasil'
+    
+    if (clickedStateCode === newSelection) {
+        setClickedStateCode('0');
+        setClickedStateName('Brasil');
+    } else {
+        setClickedStateCode(newSelection);
+        setClickedStateName(stateSelected);
+    }
+}
+
+brazilMap.value.addSignalListener("stateSelector", stateSelectorHandler);
+
+invalidation.then(() => {
+    brazilMap.value.removeSignalListener("stateSelector", stateSelectorHandler);
+});
+return {stateSelectorHandler};
+}});
+
+define({id: "fae3f873", inputs: ["energyConsumptionDataAq","aq"], outputs: ["brazilTotalConsumption"], body: (energyConsumptionDataAq,aq) => {
+let brazilTotalConsumption = energyConsumptionDataAq
+    .filter((d) => d.ano == "2023" && d.tipo_consumo != "Cativo" && d.tipo_consumo != "Total")
+    .groupby("tipo_consumo")
+    .rollup({
+        consumo_ano: aq.op.sum("consumo")
+        })
+    .derive({
+        sigla_uf: () => "BR",
+        id_uf: () => "0",
+        nome: () => "Brasil"
+        })
+    .select(['sigla_uf', 'id_uf', 'nome', 'tipo_consumo', 'consumo_ano'])
+return {brazilTotalConsumption};
+}});
+
+define({id: "ef11a08c", inputs: ["energyConsumptionDataAq","aq"], outputs: ["consumptionByState"], body: (energyConsumptionDataAq,aq) => {
+let consumptionByState = energyConsumptionDataAq
+    .filter((d) => d.ano == "2023" && d.tipo_consumo != "Cativo" && d.tipo_consumo != "Total") 
+    .groupby("sigla_uf", "id_uf", "nome", "tipo_consumo")
+    .rollup({ consumo_ano: aq.op.sum("consumo") })
+return {consumptionByState};
+}});
+
+define({id: "e0996094", inputs: ["consumptionByState","brazilTotalConsumption","aq","clickedStateCode"], outputs: ["consumptionTreatedData"], body: (consumptionByState,brazilTotalConsumption,aq,clickedStateCode) => {
+let consumptionTreatedData = consumptionByState
+    .concat(brazilTotalConsumption)
+    .filter(aq.escape((d) => d.id_uf == clickedStateCode))
+return {consumptionTreatedData};
+}});
+
+define({id: "2c2c4318", inputs: ["vl","clickedStateName","consumptionTreatedData"], outputs: ["barChart"], body: async (vl,clickedStateName,consumptionTreatedData) => {
+let barChart = await vl.render({
+    spec: {
+        width: 500,
+        height: 400,
+        autosize: {type: "fit", contains: "padding"},
+        title: {
+            text: `Consumo de energia por categoria: ${clickedStateName}`,
+            anchor: "start",
+            offset: 20,
+            fontSize: 20,
+            subtitle: [`Interaja com o mapa para mudar o estado`],
+            subtitleFontSize: 16
+            },
+        data: { values: consumptionTreatedData },
+        mark: { type: "bar" },
+        encoding: {
+            x: {
+                field: "consumo_ano", 
+                type: "quantitative",
+                axis: { grid: true },
+                title: "Consumo Anual (MWh)"
+                },
+            y: {
+                field: "tipo_consumo",
+                type: "nominal",
+                axis: { grid: false },
+                title: "Tipo de Consumo"
+                }
+        }
+  }
+});
+return {barChart};
+}});
+
+define({id: "900f0dd5", mode: "inline", inputs: ["brazilMap","display"], body: async (brazilMap,display) => {
+display(await(
+brazilMap
+))
+}});
+
+define({id: "3823194c", mode: "inline", inputs: ["barChart","display"], body: async (barChart,display) => {
+display(await(
+barChart
+))
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<h1 id="vega-lite-graficos-interativos" tabindex="-1"><a class="observablehq-header-anchor" href="#vega-lite-graficos-interativos">Vega-Lite: Gráficos Interativos</a></h1>
+<div class="observablehq observablehq--block"><!--:48f0d164:--></div>
+<div class="observablehq observablehq--block"><!--:78b315ed:--></div>
+<div class="observablehq observablehq--block"><!--:7995fc2b:--></div>
+<div class="observablehq observablehq--block"><!--:fc9c3b63:--></div>
+<div class="observablehq observablehq--block"><!--:5dbeebca:--></div>
+<div class="observablehq observablehq--block"><!--:70e5a760:--></div>
+<div class="observablehq observablehq--block"><!--:6e975650:--></div>
+<div class="observablehq observablehq--block"><!--:27c159b0:--></div>
+<div class="observablehq observablehq--block"><!--:1017c197:--></div>
+<div class="observablehq observablehq--block"><!--:fae3f873:--></div>
+<div class="observablehq observablehq--block"><!--:ef11a08c:--></div>
+<div class="observablehq observablehq--block"><!--:e0996094:--></div>
+<div class="observablehq observablehq--block"><!--:2c2c4318:--></div>
+<style>
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0;
+}
+.chart {
+    max-width: 550px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<div class="content">
+  <div class="chart"><observablehq-loading></observablehq-loading><!--:900f0dd5:--></div>
+  <div class="chart"><observablehq-loading></observablehq-loading><!--:3823194c:--></div>
+</div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-12-01T18:44:11">Dec 1, 2024</a>.</div>
+</footer>
+</div>
+</body>
+</html>
